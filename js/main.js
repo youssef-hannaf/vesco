@@ -192,7 +192,7 @@ $(document).ready(function () {
       }
 	}*/
 
-function myjQueryFunction() {
+/** function myjQueryFunction() {
 	var x = $('#header_navbar');
 
 	if (!x.hasClass('responsive')) { // yla ma3andouch class responsive
@@ -203,5 +203,13 @@ function myjQueryFunction() {
 
 		x.removeClass('responsive'); // 7aydlo class responsive
 	}
+} */
+
+function myjQueryFunction() {
+	var x = $('#header_navbar');
+
+	x.toggleClass('responsive'); // toggleClass kat3ni : yla kant 3ando class responsive 7aydha, wyla makantch zideha.
 }
+
+
 	
