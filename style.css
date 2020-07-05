@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version,ie>8
+*/
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -46,7 +53,8 @@ table {
 
 /*** common css ****/
 *, *::after, *::before{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body{
@@ -98,7 +106,9 @@ p{
     text-transform: uppercase;
     text-decoration: none;
     color: #34c6d3;
-    flex: none;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
     text-align: center;
 }
 
@@ -111,6 +121,8 @@ p{
     right: 0;
     z-index: 1;
     padding: 20px 0;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
 }
 .top_header_navbar{
@@ -118,6 +130,8 @@ p{
     padding: 7px 0 ;
 }
 .header_container{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0 85px;
 }
@@ -125,6 +139,8 @@ p{
  margin-left: auto;
 }
 .header_navbar ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 5px;
 }
@@ -162,10 +178,19 @@ p{
     background-position: center;
     background-attachment: fixed;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
   }
   .home_inner h3{
@@ -193,16 +218,22 @@ p{
 
   /*** animation *****/
   .home_inner{
-      animation-duration: .5s;
-      animation-delay: .1s;
+      -webkit-animation-duration: .5s;
+              animation-duration: .5s;
+      -webkit-animation-delay: .1s;
+              animation-delay: .1s;
   }
   .home_inner h3{
-    animation-duration: .5s;
-    animation-delay: .5s;
+    -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
 }
   .home_inner a{
-    animation-duration: .5s;
-    animation-delay: 1s;
+    -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
 }
 
 /************* section service ***/
@@ -210,13 +241,19 @@ p{
     padding: 60px 0;
 }
 .article_inner{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .service_article{
     width: 29.333333%;
     padding: 0 2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-bottom: 70px;
 }
@@ -259,10 +296,19 @@ p{
 .left_side{
     width: 40%;
     height: 700px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding-left: 30px;
 }
 .left_side .section_title_underline{
@@ -278,7 +324,9 @@ p{
     text-transform: uppercase;
     text-decoration: none;
     color: #34c6d3;
-    flex: none;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
     text-align: center;
 }
 .left_side a:hover{
@@ -297,6 +345,8 @@ p{
     border-top: 700px solid transparent;
 }
 .about_main{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -306,8 +356,11 @@ p{
     padding: 60px 0;
 }
 .popup-gallery{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .popup-gallery  a{
@@ -317,13 +370,20 @@ p{
 .popup-gallery  a img{
     width: 100%;
     height: 100%;
+    -webkit-transition:-webkit-transform .5s ease;
+    transition:-webkit-transform .5s ease;
+    -o-transition:transform .5s ease;
     transition:transform .5s ease;
+    transition:transform .5s ease, -webkit-transform .5s ease;
 }
 
 .popup-gallery  img:hover{
     /*zoom: 1.5;*/
     cursor: pointer;
-    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+            transform: scale(1.5);
+    cursor: -webkit-zoom-in;
     cursor: zoom-in;
 }
 
@@ -454,9 +514,15 @@ p{
     padding: 60px 0;
 }
 .pricing_main{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .pricing_article{
     width: 26%;
@@ -544,9 +610,15 @@ p{
     color: #fff;
 }
 .stats_main{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
 }
 .stats_main .stats_item{
@@ -588,6 +660,8 @@ p{
     background-color: #41464b;
 }
 .footer_contact{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .footer_contact_left, .footer_contact_right{
@@ -632,8 +706,13 @@ p{
     margin-right: 20px;
 }
 .footer_contact_right form{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 90%;
 }
 .form_contact{
@@ -672,6 +751,8 @@ input[type="submit"]:hover{
     margin-top: 40px;
 }
 .footer_bottom_main{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .footer_copyright, .footer_menu{
@@ -692,8 +773,11 @@ input[type="submit"]:hover{
 .footer_menu ul{
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .footer_menu ul li{
     
@@ -726,15 +810,5 @@ input[type="submit"]:hover{
     display: none;
 }
 
-/** comment ***/
 
 
-/** khask tsta3ml les prefixes dyal les browsers f le code CSS, par exemple :
- display: flex;
-
- khask tktb 7ta :
-
- display: -moz-flex;
- ...................
- ...................
- **/
