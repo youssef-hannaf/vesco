@@ -170,18 +170,25 @@ $(document).ready(function () {
     })
 });
 
-/** 
-/** Slick nav 
-$(function(){
-	$('#menu').slicknav();
-});
-<script>
-function myFunction() {
-	var x = document.getElementById("myTopnav");
-	if (x.className === "topnav") {
-	  x.className += " responsive";
-	} else {
-	  x.className = "topnav";
-	}
-  }
-  </script>**/
+
+    function myFunction() {
+		
+      var x = document.getElementById("header_navbar"); 
+      if (x.className === "header_navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "header_navbar";
+      }
+    }
+    
+
+/**function myFunction() {
+	  
+      var x = $('#header_navbar'); 
+      if (x.className === "header_navbar") {
+		x.className += " responsive";
+      } else {
+        x.className = "header_navbar";
+      }
+	}*/
+	
