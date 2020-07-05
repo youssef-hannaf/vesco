@@ -191,4 +191,17 @@ $(document).ready(function () {
         x.className = "header_navbar";
       }
 	}*/
+
+function myjQueryFunction() {
+	var x = $('#header_navbar');
+
+	if (!x.hasClass('responsive')) { // yla ma3andouch class responsive
+
+		x.addClass('responsive'); // zidlo class responsive
+
+	} else { // yla 3ando class responsive
+
+		x.removeClass('responsive'); // 7aydlo class responsive
+	}
+}
 	
