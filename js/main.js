@@ -140,8 +140,8 @@ $(function(){
 	});
 });
 
-/** smoot scroll effet */
-$(function () {
+// smoot scroll effet 
+/*$(function () {
 
     $("a.smooth_scroll").click(function () {
         event.preventDefault();
@@ -156,21 +156,8 @@ $(function () {
 
 });
 
-/** Close mobilemenu onclick 
-$(function(){
-	$(".header_navbar ul li a").on("click touch", function(){
-		$("a.icon").click();
-	});
-});*/
-
-// collapse mobile menu on click
-$(document).ready(function () {
-    $(".header_navbar ul li a").on("click touch", function () {
-        $(".collapse a i").click();
-    })
-});
-
-
+*/
+/*
     function myFunction() {
 		
       var x = document.getElementById("header_navbar"); 
@@ -180,7 +167,7 @@ $(document).ready(function () {
         x.className = "header_navbar";
       }
     }
-    
+    */
 
 /**function myFunction() {
 	  
@@ -205,11 +192,33 @@ $(document).ready(function () {
 	}
 } */
 
-function myjQueryFunction() {
+/*function myjQueryFunction() {
 	var x = $('#header_navbar');
 
 	x.toggleClass('responsive'); // toggleClass kat3ni : yla kant 3ando class responsive 7aydha, wyla makantch zideha.
-}
+
+}*/
+
+// collapse mobile menu on click 
+$(document).ready(function () {
+    $('.collapse').on("click touch", function () {
+		var x = $('#header_navbar');
+		x.toggleClass('responsive'); // toggleClass kat3ni : yla kant 3ando class responsive 7aydha, wyla makantch zideha.
+    })
+}); 
+
+// collapse mobile menu on click a menu
+$(document).ready(function () {
+    $(".header_navbar ul li a").on("click touch", function () {
+        $(".collapse").click();
+    })
+});
 
 
-	
+/*
+$(document).ready(function () {
+    $(".header_navbar .test ").on("click touch", function () {
+		$(".test").css("background-color", "#000");
+		$(".cliquable a").click();
+    })
+});*/
